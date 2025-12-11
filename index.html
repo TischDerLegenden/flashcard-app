@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="root.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/flash-card (1).png">
+    <title>Flashcard App</title>
+</head>
+<body>
+    <nav class="navbar element">
+        
+        <div class="logo-div">
+            <img class="logo" src="images/flash-card (1).png" alt="">
+            <h2>Flashcard app</h2>
+        </div>
+        <div class="choose-site-div">
+            <a href="index.html" class="button">Test yourself</a href="">
+            <div class="dot"></div>
+            <a href="chooseCards.html" class="button">Choose cards</a href="">
+        </div>
+        <div class="choose-theme-div">
+            <h2 class="choose-theme-header">Choose Theme: </h2>
+            <input type="color" onchange="changeTheme(1)" id="theme-color-selector1" class="choose-theme-button">
+            <button onclick="resetColorTheme()" class="button">reset</button>
+        </div>
+        <div class="burger-menu-toggle" tabindex="0">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="burger-menu-open element">
+            <h1 style="align-self: center;">menu</h1>
+            <a href="index.html" class="button">Test yourself</a href="">
+            <a href="chooseCards.html" class="button">Choose cards</a href="">
+            <div class="choose-theme-div-burger">
+                <h2 class="choose-theme-header">Choose Theme: </h2>
+                <input type="color" onchange="changeTheme(2)" id="theme-color-selector2" class="choose-theme-button">
+                <button onclick="resetColorTheme()" class="button">reset</button>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="center-div element">
+            <div class="flashcard-display-inner">
+                <h2 id="flashcard-display">Please input your Vocab</h2>
+            </div>
+
+            <div class="center-lower1-div">
+                <p id="remainingDisplay">Loading...</p>
+                <div class="buttons-right-div">
+                    <!-- <a href="" target="_blank" id="openWithGoogle" class="button-hollow">
+                            <img src="images/translator.png" alt="">
+                    </a> -->
+                    <button onclick="prev()" class="button-hollow">◀ prev</button>
+                    <button onclick="flipGeneral()" class="button-hollow">flip</button>
+                    <button onclick="next()" class="button-hollow" id="nextButton">next ▶</button>
+                </div>
+
+
+            </div>
+            <div class="center-lower2-div">
+                <button id="flipButton" onclick="flip()" class="button">-| flip |-</button>
+                <button id="markKnownButton" onclick="mark(true)" class="button-hollow">Mark known ✓</button>
+                <button id="markUnknownButton" onclick="mark(false)" class="button-hollow">Mark unknown ✗</button>
+                <div class="progress-bar-container">
+                    <label for="progress">progress:</label>
+                    <div id="progress" class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="settings-div element">
+            <div class="settings">
+                <div>
+                    <label for="fontSize">Font Size:</label>
+                    <input onchange="updateFontSize()" class="element2" id="fontSize" type="number" value="1">
+                </div>
+                <div>
+                    <label for="fontWeight">Font Weight:</label>
+                    <input onchange="updateFontWeight()" class="element2" id="fontWeight" type="number" value="1">
+                </div>
+                <div>
+                    <label for="skipAfterMark">Skip after marking:</label>
+                    <input onchange="saveSettings()" class="element2" id="skipAfterMark" type="checkbox">
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="data-div element">
+            <div class="known-chart">
+                <div class="chart-back">
+
+                    <div class="chart-incorrect"></div>
+                    <div class="chart-correct"></div>
+                </div>
+                <div class="labels">
+                    <div class="dot" id="in" style="background-color: red;"></div>
+                    <label class="label-incorrect" for="co">incorrect</label>
+                    <div class="dot" id="co" style="background-color: green;"></div>
+                    <label class="label-correct" for="in">correct</label>
+                </div>
+            </div>
+            <button class="button" onclick="reviewIncorrectCards()">Review Incorrect</button>
+            <button class="button" onclick="copyIncorrect()">Copy incorrect</button>
+            <button onclick="downloadIncorrectCards()" class="button">Download Incorrect</button>
+        </div>
+
+    </section>
+
+
+
+    <script src="flashcards.js"></script>
+    <script src="indexSettings.js"></script>
+    <script src="data.js"></script>
+    <script src="hexToHSL.js"></script>
+    <script src="themes.js"></script>
+</body>
+</html>

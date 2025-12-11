@@ -1,0 +1,201 @@
+:root {
+    --primaryColor: rgb(230,232,245);
+
+    /* --backgroundColor: hsl(225, 58%, 10%);
+    --elementColor: hsl(225, 58%, 15%);
+    --elementColor2: hsl(225, 58%, 20%); */
+
+    --h: 225;
+    --s: 58%;
+    --l: 10%;
+
+    --backgroundColor: hsl(0, 89%, 18%);
+    --elementColor: ;
+    --elementColor2: ;
+
+    --buttonColor: rgb(14, 165, 165);
+    --gray: hsl(220, 20%, 10%);
+    --borderColor: rgba(255,255,255,0.04);
+    --mainFontColor: rgb(254, 255, 248);
+    --secondFontColor: rgba(254, 255, 248, 0.7);
+    --navbarHeight: 48px;
+    color: var(--mainFontColor);
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;
+
+}
+
+body {
+    background-color: var(--backgroundColor);
+
+}
+.element {
+    border: 1px solid var(--borderColor);
+    background-color: var(--elementColor);
+    padding: 12px;
+    border-radius: 8px;
+    font-family: inherit
+}
+.element2 {
+    border: 1px solid var(--borderColor);
+    background-color: var(--elementColor2);
+    padding: 12px;
+    border-radius: 8px;
+    font-family: inherit
+}
+.navbar {
+    margin: 12px;
+    height: var(--navbarHeight);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 24px;
+    font-size: 0.9rem;
+}
+.choose-theme-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.button {
+    background-color: var(--buttonColor);
+    height: 32px;
+    border: 1px solid var(--borderColor);
+    border-radius: 8px;
+    color: var(--mainFontColor);
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+.button-hollow {
+    background-color: var(--elementColor2);
+    height: 32px;
+    border: 1px solid var(--borderColor);
+    border-radius: 8px;
+    color: var(--secondFontColor);
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+.button:hover {
+    filter: brightness(0.9);
+}
+.button:active {
+    filter: brightness(0.8);
+}
+.dot {
+    background-color: var(--mainFontColor);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+label {
+    font-size: 0.7rem;
+    color: var(--secondFontColor);
+
+}
+.logo-div {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    h2 {
+        margin: 0;
+    }
+}
+.logo {
+    height: 100%;
+}
+.choose-site-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-inline: 6px;
+    }
+
+}
+
+.burger-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    width: 24px;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+.burger-menu-toggle .dot {
+    background-color: var(--mainFontColor);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: block;
+}
+
+.burger-menu-open {
+    display: none;
+    position: fixed;
+    top: var(--navbarHeight);
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: var(--backgroundColor);
+    border: 1px solid var(--borderColor);
+    flex-direction: column;
+    padding: 24px;
+    gap: 12px;
+    overflow-y: auto;
+    align-items: stretch;
+
+    
+}
+.choose-theme-header {
+    margin: 12px;
+}
+.choose-theme-div-burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.burger-menu-toggle:focus ~ .burger-menu-open {
+    display: flex;
+}
+
+@media (max-width: 950px) {
+    .navbar {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 890px) {
+    .burger-menu-toggle {
+        display: flex;
+    }
+    
+    .choose-site-div {
+        display: none;
+    }
+    
+    .choose-theme-div {
+        display: none;
+    }
+}

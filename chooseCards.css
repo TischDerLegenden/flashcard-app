@@ -1,0 +1,41 @@
+body {
+    height: 98vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+section {
+    height: calc(100% - var(--navbarHeight) - 34px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+* {
+    overflow: hidden;
+}
+.center-div {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    width: min(90vw, 700px);
+    height: min(80vh, 500px);
+    gap: 8px;
+}
+.center-upper-div {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 15%;
+}
+textarea {
+    color: var(--mainFontColor);
+    resize: none;
+    width: 95%;
+    height: 75%;
+    scrollbar-color: var(--backgroundColor) transparent;
+    overflow-y: scroll;
+}
+textarea:focus {
+    outline: none;
+}

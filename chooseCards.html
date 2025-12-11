@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="root.css">
+    <link rel="stylesheet" href="chooseCards.css">
+    <title>Flashcard App</title>
+</head>
+<body>
+    <nav class="navbar element">
+        <input type="checkbox" id="burger-menu-toggle" class="burger-menu-toggle">
+        <label for="burger-menu-toggle" class="burger-menu-label">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </label>
+        
+        <div class="logo-div">
+            <img class="logo" src="images/flash-card (1).png" alt="">
+            <h2>Flashcard app</h2>
+        </div>
+        <div class="choose-site-div">
+            <a href="index.html" class="button">Test yourself</a href="">
+            <div class="dot"></div>
+            <a href="chooseCards.html" class="button">Choose cards</a href="">
+        </div>
+        <div class="choose-theme-div">
+            <h2 class="choose-theme-header">Choose Theme: </h2>
+            <input type="color" onchange="changeTheme(1)" id="theme-color-selector1" class="choose-theme-button">
+            <button onclick="resetColorTheme()" class="button">reset</button>
+        </div>
+        <div class="burger-menu-open element">
+            <h1 style="align-self: center;">menu</h1>
+            <a href="index.html" class="button">Test yourself</a href="">
+            <a href="chooseCards.html" class="button">Choose cards</a href="">
+            <div class="choose-theme-div-burger">
+                <h2 class="choose-theme-header">Choose Theme: </h2>
+                <input type="color" onchange="changeTheme(2)" id="theme-color-selector2" class="choose-theme-button">
+                            <button onclick="resetColorTheme()" class="button">reset</button>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <section>
+        <div class="center-div element">
+            <div class="center-upper-div">
+                <button onclick="saveJSON()" class="button">save</button>
+            </div>
+            <label for="ta">Paste a JSON array of objects. Each object should have a front and back field. Example / your old JSON below:</label>
+            <textarea id="ta" placeholder="incert JSON here ..." class="element2" style="color: white;">
+                [
+                    {
+                        "front": "Hello",
+                        "back": "Hola"
+                    },
+                    {
+                        "front": "Thank you",
+                        "back": "Gracias"
+                    },
+                    {
+                        "front": "Apple",
+                        "back": "Manzana"
+                    }
+                ]
+            </textarea>
+        </div>
+       
+    </section>
+
+    <script src="chooseCardsSettings.js"></script>
+    <script src="hexToHSL.js"></script>
+    <script src="themes.js"></script>
+    <script src="save.js"></script>
+</body>
+</html>
