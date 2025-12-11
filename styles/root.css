@@ -147,6 +147,7 @@ label {
     display: none;
     position: fixed;
     top: var(--navbarHeight);
+    z-index: 5;
     left: 0;
     right: 0;
     top: 0;
@@ -157,9 +158,18 @@ label {
     gap: 12px;
     overflow-y: auto;
     align-items: stretch;
-
-    
 }
+
+.burger-menu-open-cover {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 .choose-theme-header {
     margin: 12px;
 }
@@ -174,10 +184,6 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.burger-menu-toggle:focus ~ .burger-menu-open {
-    display: flex;
 }
 
 @media (max-width: 950px) {

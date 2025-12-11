@@ -25,13 +25,14 @@
             <input type="color" onchange="changeTheme(1)" id="theme-color-selector1" class="choose-theme-button">
             <button onclick="resetColorTheme()" class="button">reset</button>
         </div>
-        <div class="burger-menu-toggle" tabindex="0">
+        <div onclick="openBurgerMenu()" class="burger-menu-toggle" tabindex="0">
             <div class="dot"></div>
             <div class="dot"></div>
             <div class="dot"></div>
         </div>
-        <div class="burger-menu-open element">
+        <div onclick="closeBurgerMenu()" class="burger-menu-open element">
             <h1 style="align-self: center;">menu</h1>
+            <h2 style="position: absolute; top: 0; right: 0; margin: 32px; font-size: 2rem;">X</h2>
             <a href="index.html" class="button">Test yourself</a href="">
             <a href="../pages/input.html" class="button">Choose cards</a href="">
             <div class="choose-theme-div-burger">
@@ -40,6 +41,7 @@
                 <button onclick="resetColorTheme()" class="button">reset</button>
             </div>
         </div>
+        <div onclick="closeBurgerMenu()" class="burger-menu-open-cover"></div>
     </nav>
     <section>
         <div class="center-div element">
@@ -118,5 +120,6 @@
     <script src="../scripts/chart.js"></script>
     <script src="../scripts/hexToHSL.js"></script>
     <script src="../scripts/themes.js"></script>
+    <script src="../scripts/burger_menu.js"></script>
 </body>
 </html>
