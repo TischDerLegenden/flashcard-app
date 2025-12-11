@@ -1,3 +1,11 @@
+/*
+
+handle all of the flashcard logic ->
+-> loading cards from localStorage
+-> handeling user input to flip cards ect.
+
+*/
+
 const remainingDisplay = document.getElementById("remainingDisplay");
 const flashcardDisplay = document.getElementById("flashcard-display");
 const flashcardDisplayInner = document.querySelector(".flashcard-display-inner");

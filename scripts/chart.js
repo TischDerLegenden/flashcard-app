@@ -1,9 +1,11 @@
+/*
+draws the chart of correct and incorrect 
+*/
+
+
 const chartIncorrect = document.querySelector(".chart-incorrect");
 const chartCorrect = document.querySelector(".chart-correct");
 const chartHeight = document.querySelector(".chart-back").offsetHeight;
-
-
-
 
 const labelCorrect = document.querySelector(".label-correct");
 const labelIncorrect = document.querySelector(".label-incorrect");

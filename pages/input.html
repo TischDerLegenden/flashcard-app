@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="root.css">
-    <link rel="stylesheet" href="chooseCards.css">
+    <link rel="stylesheet" href="..styles/root.css">
+    <link rel="stylesheet" href="..styles/input.css">
     <title>Flashcard App</title>
 </head>
 <body>
@@ -21,9 +21,9 @@
             <h2>Flashcard app</h2>
         </div>
         <div class="choose-site-div">
-            <a href="index.html" class="button">Test yourself</a href="">
+            <a href="..index.html" class="button">Test yourself</a href="">
             <div class="dot"></div>
-            <a href="chooseCards.html" class="button">Choose cards</a href="">
+            <a href="input.html" class="button">Choose cards</a href="">
         </div>
         <div class="choose-theme-div">
             <h2 class="choose-theme-header">Choose Theme: </h2>
@@ -32,12 +32,12 @@
         </div>
         <div class="burger-menu-open element">
             <h1 style="align-self: center;">menu</h1>
-            <a href="index.html" class="button">Test yourself</a href="">
-            <a href="chooseCards.html" class="button">Choose cards</a href="">
+            <a href="..index.html" class="button">Test yourself</a>
+            <a href="..styles/input.html" class="button">Choose cards</a>
             <div class="choose-theme-div-burger">
                 <h2 class="choose-theme-header">Choose Theme: </h2>
                 <input type="color" onchange="changeTheme(2)" id="theme-color-selector2" class="choose-theme-button">
-                            <button onclick="resetColorTheme()" class="button">reset</button>
+                <button onclick="resetColorTheme()" class="button">reset</button>
 
             </div>
         </div>
@@ -70,9 +70,9 @@
        
     </section>
 
-    <script src="chooseCardsSettings.js"></script>
-    <script src="hexToHSL.js"></script>
-    <script src="themes.js"></script>
-    <script src="save.js"></script>
+    <script src="..scripts/input_settings.js"></script>
+    <script src="..scripts/hexToHSL.js"></script>
+    <script src="..scripts/themes.js"></script>
+    <script src="..scripts/save.js"></script>
 </body>
 </html>
