@@ -23,7 +23,6 @@ function changeTheme(colorSelectorNumber) {
     colorSelector1.value = color;
     colorSelector2.value = color;
 
-    console.log("color", color);
     HSL = hexToHSL(color);
     console.log("set theme-color to: " + `hsl(${HSL.h}, ${HSL.s}%, ${HSL.l}%)`);
 

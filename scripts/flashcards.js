@@ -15,7 +15,7 @@ const markKnownButton = document.getElementById("markKnownButton");
 const nextButton = document.getElementById("nextButton");
 const flipButton = document.getElementById("flipButton");
 
-const openWithGoogle = document.getElementById("openWithGoogle");
+// const openWithGoogle = document.getElementById("openWithGoogle");
 
 
 const progressBar = document.querySelector(".progress");
@@ -39,9 +39,7 @@ let length = CARDS.length
 
 function displayCard() {
     flashcardDisplay.textContent = CARDS[cardIndex].front;
-    console.log("href: ", `https://translate.google.com/?sl=auto&tl=en&text=${encodeURIComponent(CARDS[cardIndex].front)}&op=translate`);
-    openWithGoogle.href =
-    `https://translate.google.com/?sl=auto&tl=en&text=${encodeURIComponent(CARDS[cardIndex].front)}&op=translate`;
+    // openWithGoogle.href = `https://translate.google.com/?sl=auto&tl=en&text=${encodeURIComponent(CARDS[cardIndex].front)}&op=translate`;
 }
 
 function prev() {

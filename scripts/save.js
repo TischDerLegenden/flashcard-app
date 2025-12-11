@@ -29,6 +29,6 @@ if (CARDS == null || CARDS == undefined) {
 function saveJSON() {
     localStorage.setItem("inputJSON", textarea.value);
     alert("Successfully saves your input!");
-    console.log("Successfully saved your input!");
+    console.log("Successfully saved user input");
     console.table(textarea.value);
 }
