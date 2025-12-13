@@ -39,6 +39,8 @@ Use ```flip``` to flip the card, and ```Mark known``` ```Mark unknown``` to trac
 
 Below the chart there are three buttons. ```Review Incorrect``` will directly restart the testing process, but only with the cards you marked wrong. ```Copy incorrect``` will copy the cards marked as incorrect to the clipboard. ```Download incorrect``` will download a JSON file, containing the incoorect cards.
 
+You can also adjust the font-size and font-weight.
+
 <hr>
 
 ### Why am I called TischDerLegenden?
