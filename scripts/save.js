@@ -20,6 +20,8 @@ example = `
 
 
 let CARDS = JSON.parse(localStorage.getItem("inputJSON"));
+
+
 if (CARDS == null || CARDS == undefined) {
     textarea.value = example;
 } else {
@@ -27,8 +29,16 @@ if (CARDS == null || CARDS == undefined) {
 }
 
 function saveJSON() {
-    localStorage.setItem("inputJSON", textarea.value);
-    alert("Successfully saves your input!");
-    console.log("Successfully saved user input");
-    console.table(textarea.value);
+
+    let data = textarea.value;
+
+    try {
+        
+        JSON.parse(data);
+        localStorage.setItem("inputJSON", textarea.value);
+        alert("Successfully saved your input!");
+    
+    } catch (err) {
+        alert(`Not valid JSON: ${err}`);
+    }
 }
