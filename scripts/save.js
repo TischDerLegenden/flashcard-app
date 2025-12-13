@@ -29,16 +29,28 @@ if (CARDS == null || CARDS == undefined) {
 }
 
 function saveJSON() {
-
     let data = textarea.value;
 
     try {
-        
-        JSON.parse(data);
-        localStorage.setItem("inputJSON", textarea.value);
+        const parsed = JSON.parse(data);
+
+        const isValid =
+        Array.isArray(parsed) &&
+        parsed.every(
+            item =>
+            typeof item === "object" &&
+            item !== null &&
+            typeof item.front === "string" &&
+            typeof item.back === "string"
+        );
+
+        if (!isValid) {
+            throw new Error("JSON must be an array of objects with 'front' and 'back' strings");
+        }
+
+        localStorage.setItem("inputJSON", data);
         alert("Successfully saved your input!");
-    
     } catch (err) {
-        alert(`Not valid JSON: ${err}`);
+        alert(`Not valid JSON:\n\n${err.message}`);
     }
 }
