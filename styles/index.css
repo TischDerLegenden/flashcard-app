@@ -99,17 +99,6 @@ html {
     justify-content: center;
     align-items: center;
 }
-
-
-
-
-
-
-
-
-
-
-
 .center-lower1-div {
     display: flex;
     align-items: center;
@@ -150,7 +139,6 @@ html {
         background: linear-gradient(to right, var(--buttonColor), #2edcff);
     }
 }
-
 .settings-div {
     flex-direction: column;
     display: flex;
@@ -182,10 +170,9 @@ html {
             color: var(--fontColor);
             outline: none;
         }
-        #skipAfterMark {
+        #skipAfterMark, #randomCardOrder {
             width: 24px;
             height: 24px;
-            color: var(--elementColor2);
         }
     }
     .data {
@@ -252,7 +239,6 @@ html {
 
     }
 }
-
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

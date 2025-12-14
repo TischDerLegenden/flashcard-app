@@ -21,7 +21,8 @@ const flipButton = document.getElementById("flipButton");
 const progressBar = document.querySelector(".progress");
 const progressBarWidth = document.querySelector(".progress-bar").offsetWidth;
 
-const skip_after_mark = document.getElementById("skipAfterMark"); 
+const skip_after_mark = document.getElementById("skipAfterMark");
+const random_card_order = document.getElementById("randomCardOrder");
 
 let cardIndex = 0;
 let cardSide = "front";
@@ -31,11 +32,27 @@ let incorrectCardsAmount = 0;
 
 let incorrectCards = [];
 
-let CARDS = JSON.parse(localStorage.getItem("inputJSON"));
 
+
+// Source - https://stackoverflow.com/a
+// Posted by Laurens Holst, modified by community. See post 'Timeline' for change history
+// Retrieved 2025-12-14, License - CC BY-SA 4.0
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+let CARDS = JSON.parse(localStorage.getItem("inputJSON"));
 
 let length = CARDS.length
 
+console.log(JSON.parse(localStorage.getItem("settings")).randomCardOrder)
+
+if (JSON.parse(localStorage.getItem("settings")).randomCardOrder) {
+    shuffleArray(CARDS);
+}
 
 function displayCard() {
     flashcardDisplay.textContent = CARDS[cardIndex].front;
@@ -142,13 +159,13 @@ function downloadIncorrectCards() {
     }
 
 
-    const data = JSON.stringify(incorrectCards, null, 2);     // convert object to text
+    const data = JSON.stringify(incorrectCards, null, 2);
     const blob = new Blob([data], { type: "application/json" });
     const url = URL.createObjectURL(blob);
 
     const a = document.createElement("a");
     a.href = url;
-    a.download = "flashcard_app_incorrect_cards.json";                     // filename
+    a.download = "flashcard_app_incorrect_cards.json";
     a.click();
 
     URL.revokeObjectURL(url);
