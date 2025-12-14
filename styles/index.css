@@ -25,15 +25,11 @@ html {
     grid-row-start: span 2;
 
 }
-.settings-div {
-
-}
 .data-div {
     grid-row-start: 2;
     grid-column-start: 3;
 
 }
-
 
 @media (max-width: 850px) {
 
@@ -44,11 +40,9 @@ html {
         justify-content: center;
         align-items: center;
     }
-
     html {
         overflow-y: scroll;
     }
-
     .center-div {
         grid-column-start: 2;
         width: min(90vw, 500px) !important;
@@ -65,10 +59,6 @@ html {
 
     }
 }
-
-
-
-
 .center-div {
     flex-direction: column;
     display: flex;
@@ -143,6 +133,7 @@ html {
     flex-direction: column;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 12px;
     width: auto;
     height: auto;
@@ -175,9 +166,6 @@ html {
             height: 24px;
         }
     }
-    .data {
-
-    }
 }
 #openWithGoogle {
     img {
@@ -193,6 +181,7 @@ html {
     flex-direction: column;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 12px;
     width: auto;
     height: auto;
@@ -235,17 +224,13 @@ html {
         display: flex;
         flex-direction: column;
     }
-    .known-chart {
-
-    }
 }
-
+/* .logo-div h2 {
+    background: linear-gradient(to right, #60C3D8, #C7C7C6);
+    background-clip: text;
+    color: transparent;
+} */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
 }
