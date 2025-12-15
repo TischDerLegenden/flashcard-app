@@ -233,12 +233,16 @@ html {
         width: 80%;
     }
     .known-chart {
-        width: 132px;
+        width: max(132px, 70%);
         display: grid;
         grid-template-columns: calc(90% / 3) calc(90% / 3 * 2);
         grid-template-rows: 1fr;
         align-items: center;
         justify-content: center;
+
+        legend {
+            justify-self: start !important;
+        }
 
         .chart-back {
             height: 98px;
