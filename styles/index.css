@@ -7,12 +7,31 @@ section {
     padding: 12px;
     gap: 12px;
     grid-template-columns: 2fr 25rem 12rem 2fr;
-    grid-template-rows: 3fr 3fr 5rem;
+    grid-template-rows: 3fr 3fr 1px;
     height: calc(100vh - var(--navbarHeight) - 84px);
+}
+@media (max-height: 760px) and (min-width: 850px) {
+    section {
+        grid-template-columns: 1fr 12rem 25rem 12rem 1fr;
+        grid-template-rows: 3fr;
+    }
+    .data-div {
+        grid-column-start: 4 !important;
+        grid-row-start: 1 !important;
+    }
+    .settings-div {
+        grid-column-start: 2 !important;
+        grid-row-start: 1 !important;
+    }   
+    .center-div {
+        grid-column-start: 3 !important;
+        grid-row-start: 1 !important;
+    }
 }
 body {
     padding: 0;
     margin: 0;
+    padding-top: calc(var(--navbarHeight) + 46px);
 }
 html {
     overflow: hidden;
@@ -34,31 +53,55 @@ html {
 @media (max-width: 850px) {
 
     section {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 2fr 1fr 1fr 1fr;
+        /* grid-template-columns: 2rem 1fr 2rem;
+        grid-template-rows: auto auto auto; */
         height: auto;
+        display: flex;
+        flex-direction: column;
+        padding-inline: 12px;
         justify-content: center;
-        align-items: center;
+        align-items: stretch;
     }
     html {
         overflow-y: scroll;
     }
     .center-div {
         grid-column-start: 2;
-        width: min(90vw, 500px) !important;
+        /* width: min(90vw, 500px) !important; */
         grid-row-start: auto;
     }
     .settings-div {
         grid-column-start: 2;
-        width: min(90vw, 500px) !important;
+        /* width: min(90vw, 500px) !important; */
         
     }
     .data-div {
         grid-column-start: 2;
-        width: min(90vw, 500px) !important;
+        /* width: min(90vw, 500px) !important; */
 
     }
 }
+
+@media (max-width: 350px) {
+    body {
+        background-color: var(--elementColor);
+    }
+    nav {
+        margin: 0 !important;
+    }
+    section {
+        padding: 0;
+        gap: 0;
+    }
+    .element {
+        border-radius: 0;
+        border: 0;
+    }
+    .line {
+        display: flex;
+    }
+}
+
 .center-div {
     flex-direction: column;
     display: flex;
