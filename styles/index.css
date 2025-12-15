@@ -50,11 +50,9 @@ html {
 
 }
 
-@media (max-width: 850px) {
+@media (max-width: 850px) or ((max-width: 1050px) and (max-height: 760px)) {
 
     section {
-        /* grid-template-columns: 2rem 1fr 2rem;
-        grid-template-rows: auto auto auto; */
         height: auto;
         display: flex;
         flex-direction: column;
