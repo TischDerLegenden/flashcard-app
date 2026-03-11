@@ -24,7 +24,9 @@
     font-family: Helvetica, sans-serif;
 
 }
-
+* {
+    scrollbar-color: var(--backgroundColor) transparent;
+}
 body {
     background-color: var(--backgroundColor);
     bottom: 0;

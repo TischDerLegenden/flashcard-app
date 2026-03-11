@@ -9,7 +9,7 @@ body {
     align-items: stretch;
     padding: 12px;
     gap: 12px;
-    grid-template-columns: 2fr 25rem 12rem 2fr;
+    grid-template-columns: 2fr 22rem 16rem 2fr;
     grid-template-rows: calc(var(--navbarHeight) + 16px) min(80vh, 600px) 4rem;
 }
 
@@ -56,7 +56,6 @@ html {
 textarea {
     color: var(--mainFontColor);
     resize: none;
-    scrollbar-color: var(--backgroundColor) transparent;
     overflow-y: scroll;
 }
 textarea:focus {
@@ -91,6 +90,8 @@ textarea:focus {
 }
 
 .saved-cards-list {
+    padding-right: 6px;
+
     background-color: transparent;
     display: flex;
     flex-direction: column;
@@ -103,6 +104,7 @@ textarea:focus {
         gap: 8px;
         height: fit-content;
         flex-shrink: 0;
+        line-break: anywhere;
         div {
             max-width: fit-content;
         }
@@ -125,7 +127,7 @@ textarea:focus {
         height: auto;
     }
     body {
-        grid-template-columns: 3fr 2fr;
+        grid-template-columns: 5fr 4fr;
         grid-template-rows: calc(var(--navbarHeight) + 16px) 1fr;
     }
     html {
