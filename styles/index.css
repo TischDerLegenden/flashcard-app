@@ -60,8 +60,11 @@ html {
         justify-content: center;
         align-items: stretch;
     }
-    html {
+    html, body {
         overflow-y: scroll;
+    }
+    nav {
+        box-shadow: 0 0 12px 12px black;
     }
     .center-div {
         grid-column-start: 2;

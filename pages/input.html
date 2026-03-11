@@ -44,13 +44,13 @@
         </div>
         <div onclick="closeBurgerMenu()" class="burger-menu-open-cover"></div>
     </nav>
-    <section>
+    <!-- <section> -->
         <div class="center-div element">
             <div class="center-upper-div">
                 <button onclick="saveJSON()" class="button">save</button>
+                <label>Paste a JSON array of objects. Each object should have a front and back field. Example / your old JSON below:</label>
             </div>
-            <label for="ta">Paste a JSON array of objects. Each object should have a front and back field. Example / your old JSON below:</label>
-            <textarea id="ta" placeholder="incert JSON here ..." class="element2" style="color: white;">
+            <textarea placeholder="insert JSON here ..." class="element2" style="color: white;">
                 [
                     {
                         "front": "Hello",
@@ -67,9 +67,24 @@
                 ]
             </textarea>
         </div>
-       
-    </section>
 
+        <div class="line"></div>
+        
+        <div class="saved-cards-div element">
+            <button class="button" onclick="saveCardSet()">save</button>
+            <input id="saved-cards-name-input" type="text" placeholder="name">
+            <label>Save what is currently in the textarea, to be loaded later.</label>
+
+            <div id="saved-card-display-list" class="saved-cards-list element2">
+
+            </div>  
+
+
+        </div>
+       
+    <!-- </section> -->
+
+    <script src="../scripts/save_card_sets.js"></script>
     <script src="../scripts/input_settings.js"></script>
     <script src="../scripts/hexToHSL.js"></script>
     <script src="../scripts/themes.js"></script>

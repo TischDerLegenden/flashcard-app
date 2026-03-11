@@ -1,6 +1,6 @@
 const textarea = document.querySelector("textarea"); 
 
-example = `
+const example = `
                 [
                     {
                         "front": "Hello",

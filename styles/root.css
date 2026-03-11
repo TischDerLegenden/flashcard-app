@@ -27,7 +27,11 @@
 
 body {
     background-color: var(--backgroundColor);
-
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
 }
 .element {
     border: 1px solid var(--borderColor);
@@ -219,4 +223,13 @@ a {
     .choose-theme-div {
         display: none;
     }
+}
+input[type=text] {
+    border: 1px solid var(--borderColor);
+    background-color: var(--elementColor2);
+    padding: 4px;
+    border-radius: 8px;
+    outline: none;
+    color: white; 
+    font-family: inherit;
 }
